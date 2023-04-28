@@ -114,7 +114,8 @@ source $ZSH/oh-my-zsh.sh
 alias nv=nvim
 alias act-venv="source .venv/bin/activate"
 alias py="python3"
-
+alias ts="tmux attach-session -t"
+alias td="tmux detach"
 export PYENV_ROOT="$HOME/.pyenv"
 export PATH="$PATH:$HOME/bin" #bazel env
 export PATH="$PYENV_ROOT/bin:$PATH" #tensor env
@@ -133,5 +134,7 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # Add llvm to path for faster linking
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+
+
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
