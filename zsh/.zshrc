@@ -126,6 +126,8 @@ export FZF_DEFAULT_COMMAND='fd --type f --stripe-cwd-prefix'
 # Quick start and stop yabai
 alias ys="brew services start yabai"
 alias yn="brew services stop yabai"
+# Library aliases
+alias pginit="initdb --locale=C -E UTF-8 /opt/homebrew/var/postgresql"
 
 
 #Add openJDK to our path
