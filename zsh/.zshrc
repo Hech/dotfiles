@@ -112,8 +112,9 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias nv=nvim
-alias act-venv="source .venv/bin/activate"
+alias actv="source .venv/bin/activate"
 alias py="python3"
+alias tc="tmux new -s"
 alias ts="tmux attach-session -t"
 alias td="tmux detach"
 export PYENV_ROOT="$HOME/.pyenv"
