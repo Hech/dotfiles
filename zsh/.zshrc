@@ -130,14 +130,20 @@ alias yn="brew services stop yabai"
 # Library aliases
 alias pginit="initdb --locale=C -E UTF-8 /opt/homebrew/var/postgresql"
 
-
-#Add openJDK to our path
+# Add openJDK to our path
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 # for compilers to have access to openJDk
 export CPPFLAGS="-I/opt/homebrew/opt/openjdk/include"
 # Add llvm to path for faster linking
 export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
 
-
+# Add llvm to path - may cause issue with osx
+export CPPFLAGS="-I/opt/homebrew/opt/llvm/include:$CPPFLAGS"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib:$LLDFLAGS"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
+# fnm setup
+eval "$(fnm env --use-on-cd)"
