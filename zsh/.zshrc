@@ -147,3 +147,10 @@ export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
 # fnm setup
 eval "$(fnm env --use-on-cd)"
+export PATH="/Users/tricia/Library/Caches/fnm_multishells/64419_1684051576936/bin":$PATH
+export FNM_MULTISHELL_PATH="/Users/tricia/Library/Caches/fnm_multishells/64419_1684051576936"
+export FNM_NODE_DIST_MIRROR="https://nodejs.org/dist"
+export FNM_ARCH="arm64"
+export FNM_LOGLEVEL="info"
+export FNM_VERSION_FILE_STRATEGY="local"
+export FNM_DIR="/Users/tricia/Library/Application Support/fnm"
