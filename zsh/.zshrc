@@ -112,7 +112,9 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias nv=nvim
-alias actv="source .venv/bin/activate"
+alias enact="source .venv/bin/activate"
+alias act="act --container-architecture linux/amd64" # for MacOS M chip env
+alias python="python3"
 alias py="python3"
 # Tmux aliaes
 alias tc="tmux new -s"
@@ -129,6 +131,7 @@ export PATH="$PATH:$HOME/bin" #bazel env
 export PATH="$PYENV_ROOT/bin:$PATH" #tensor env
 eval "$(pyenv init --path)" 
 eval "$(pyenv init -)"
+
 # Use fd for fuzzy finder to respect .gitignore
 export FZF_DEFAULT_COMMAND='fd --type f --stripe-cwd-prefix'
 # Quick start and stop yabai
@@ -161,3 +164,8 @@ export FNM_ARCH="arm64"
 export FNM_LOGLEVEL="info"
 export FNM_VERSION_FILE_STRATEGY="local"
 export FNM_DIR="/Users/tricia/Library/Application Support/fnm"
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
+
+export PYTORCH='opt/homebrew/Cellar/pytorch/2.0.1'
+export LD_LIBRARY_PATH=$PYTORCH:$LD_LIBRARY_PATH
