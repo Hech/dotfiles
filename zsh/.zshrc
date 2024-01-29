@@ -167,6 +167,9 @@ export FNM_DIR="/Users/tricia/Library/Application Support/fnm"
 export VOLTA_HOME="$HOME/.volta"
 export PATH="$VOLTA_HOME/bin:$PATH"
 
+#add Android to path
+ANDROID_HOME="/Users/tricia/Library/Android/sdk"
+
 export PYTORCH='opt/homebrew/Cellar/pytorch/2.0.1'
 export LD_LIBRARY_PATH=$PYTORCH:$LD_LIBRARY_PATH
 #compdef gt
