@@ -112,7 +112,19 @@ source $ZSH/oh-my-zsh.sh
 
 
 alias nv=nvim
-alias enact="source .venv/bin/activate"
+# auto activate/deactivate
+python_venv() {
+  MYVENV=./venv
+  # when you cd into a folder that contains $MYVENV
+  [[ -d $MYVENV ]] && source $MYVENV/bin/activate > /dev/null 2>&1
+  # when you cd into a folder that doesn't
+  [[ ! -d $MYVENV ]] && deactivate > /dev/null 2>&1
+}
+autoload -U add-zsh-hook
+add-zsh-hook chpwd python_venv
+
+python_venv
+alias pyact=python_venv
 alias act="act --container-architecture linux/amd64" # for MacOS M chip env
 alias python="python3"
 alias py="python3"
@@ -172,6 +184,12 @@ ANDROID_HOME="/Users/tricia/Library/Android/sdk"
 
 export PYTORCH='opt/homebrew/Cellar/pytorch/2.0.1'
 export LD_LIBRARY_PATH=$PYTORCH:$LD_LIBRARY_PATH
+
+# Go path
+export GOPATH=/opt/homebrew/Cellar/go/1.22.1
+export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
+export PATH=$PATH:$(go env GOPATH)/bin
+
 #compdef gt
 ###-begin-gt-completions-###
 #
