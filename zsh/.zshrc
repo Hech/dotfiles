@@ -226,3 +226,14 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+
+# bun completions
+[ -s "/Users/tricia/.bun/_bun" ] && source "/Users/tricia/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
