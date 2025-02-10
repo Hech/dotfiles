@@ -126,8 +126,8 @@ add-zsh-hook chpwd python_venv
 python_venv
 alias pyact=python_venv
 alias act="act --container-architecture linux/amd64" # for MacOS M chip env
-alias python="python3"
-alias py="python3"
+alias python="python3.13"
+alias py="python3.13"
 # Tmux aliaes
 alias tc="tmux new -s"
 alias ts="tmux attach-session -t"
@@ -189,6 +189,9 @@ export LD_LIBRARY_PATH=$PYTORCH:$LD_LIBRARY_PATH
 export GOPATH=/opt/homebrew/Cellar/go/1.22.1
 export PATH=$PATH:$GOROOT/bin:$GOPATH/bin
 export PATH=$PATH:$(go env GOPATH)/bin
+
+# Use latest version of python
+export PATH="/opt/homebrew/bin/python3.13/bin:$PATH"
 
 #compdef gt
 ###-begin-gt-completions-###
